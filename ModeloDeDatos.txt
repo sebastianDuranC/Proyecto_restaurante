@@ -1,0 +1,50 @@
+ENTIDADES
+Cliente (IdCliente[pk], Nombre, Correo, NIT, Telefono, FechaRegistro)
+Venta (IdVenta[pk], IdEmpleado[fk], IdCliente[fk], IdPedido[fk], MontoTotal, MontoCambio, MetodoPago, FechaRegistro)
+Producto (IdProducto[pk], IdProveedor[fk], Nombre, Descripcion, Precio, Stock, PrecioVenta, Cantidad, TipoProducto)
+Pedido (IdPedido[pk], IdCliente[fk], NumeroMesa[fk], DescripcionProducto[fk], fechaPedido, HoraPedido)
+Mesa (IdMesa[pk], NumeroMesa, Capacidad)
+Sucursal (IdSucursal[pk], Direccion, Telefono)
+Empleado (IdEmpleado[pk], Nombre, Cargo, Salario, Telefono, Direccion, CI)
+Proveedor (IdProveedor[pk], IdProducto[fk], FechaEntrega, Nombre, Correo, Telefono, RazonComercial, CI)
+Compra (IdCompra[pk], IdEmpleado[fk], IdProveedor[fk], FechaCompra, CantidaCompra, PrecioTotal)
+Inventario (IdInventario[pk], NombreProducto, Descripcion, Marca, PrecioCompra, Cantidad, CantidadMinima)
+Acceso (IdAcceso[pk], NombreEmpleado[fk], UserName, usePass)
+Factura (IdFactura, IdCliente[fk], IdMesa[pk], IdPedido[fk], IdVenta[fk], NombreProducto[fk], FechaEmision, fechaProducto, CantidadProducto, PrecioUnitario, SubTotal)
+DetalleVenta (IdDetalleVenta[pk], IdFactura[fk], IdProducto[fk], FechaVenta, PrecioTotal, Cantidad)
+DetalleCompra (IdDetalleCompra[pk], IdCompra[fk], PrecioCompra, Cantidad, MontoTotal, FechaRegistro)
+
+RELACIONES
+Cliente - Venta (Uno a muchos): Un cliente puede realizar varias compras, por lo que hay una relación uno a muchos entre el cliente y las ventas.
+
+Venta - Empleado (Muchos a uno): Varias ventas pueden ser realizadas por un empleado, lo que implica una relación muchos a uno entre ventas y empleados.
+
+Venta - Cliente (Muchos a uno): Cada venta está asociada a un cliente, lo que implica una relación muchos a uno entre ventas y clientes.
+
+Venta - Pedido (Uno a uno o uno a muchos): Una venta puede estar relacionada con uno o varios pedidos, dependiendo de cómo esté estructurado el sistema. Puede ser una relación uno a uno si cada venta corresponde a un solo pedido, o uno a muchos si una venta puede incluir múltiples pedidos.
+
+Pedido - Cliente (Muchos a uno): Cada pedido está asociado a un cliente, lo que implica una relación muchos a uno entre pedidos y clientes.
+
+Pedido - Mesa (Muchos a uno): Cada pedido se realiza en una mesa, lo que implica una relación muchos a uno entre pedidos y mesas.
+
+Proveedor - Producto (Uno a muchos): Un proveedor puede suministrar varios productos, lo que indica una relación uno a muchos entre proveedores y productos.
+
+Compra - Empleado (Muchos a uno): Varias compras pueden ser realizadas por un empleado, lo que implica una relación muchos a uno entre compras y empleados.
+
+Compra - Proveedor (Muchos a uno): Cada compra está asociada a un proveedor, lo que implica una relación muchos a uno entre compras y proveedores.
+
+Inventario - Producto (Uno a uno): Cada entrada en el inventario corresponde a un producto, lo que indica una relación uno a uno entre inventario y productos.
+
+Acceso - Empleado (Uno a uno): Cada empleado tiene un acceso, lo que implica una relación uno a uno entre acceso y empleados.
+
+Factura - Cliente (Muchos a uno): Cada factura está asociada a un cliente, lo que implica una relación muchos a uno entre facturas y clientes.
+
+Factura - Mesa (Muchos a uno): Cada factura está asociada a una mesa, lo que implica una relación muchos a uno entre facturas y mesas.
+
+Factura - Pedido (Muchos a uno): Cada factura está asociada a un pedido, lo que implica una relación muchos a uno entre facturas y pedidos.
+
+Detalle de Venta - Factura (Muchos a uno): Cada detalle de venta está relacionado con una factura, lo que implica una relación muchos a uno entre detalles de venta y facturas.
+
+Detalle de Venta - Producto (Uno a uno o uno a muchos): Cada detalle de venta está asociado a un producto, lo que puede ser una relación uno a uno si cada producto vendido se registra por separado o uno a muchos si un producto puede tener múltiples registros en los detalles de venta.
+
+Detalle de Compra - Compra (Muchos a uno): Cada detalle de compra está relacionado con una compra, lo que implica una relación muchos a uno entre detalles de compra y compras.
