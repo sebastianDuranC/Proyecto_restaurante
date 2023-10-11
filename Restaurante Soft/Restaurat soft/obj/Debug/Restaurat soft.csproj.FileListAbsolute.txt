@@ -1,0 +1,71 @@
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\icons\comida3.jpg
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\icons\bebida.jpg
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\icons\comida1.jpg
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\icons\comida.png
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Restaurat soft.exe.config
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Restaurat soft.exe
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Restaurat soft.pdb
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\EntityFramework.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Microsoft.Win32.SystemEvents.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\Newtonsoft.Json.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\RestSharp.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Buffers.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.CodeDom.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Data.Odbc.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Data.OleDb.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Data.SqlClient.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Drawing.Common.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.IO.Packaging.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.IO.Ports.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Memory.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.AccessControl.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.Permissions.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.ServiceModel.Syndication.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\System.Threading.AccessControl.xml
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.csproj.AssemblyReference.cache
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.csproj.SuggestedBindingRedirects.cache
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.ACCESO.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.COMPONENTES.sopaMANI.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.COMPONENTES.UserControl1.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.COMPONENTES.UserControl2.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.COMPONENTES.UserControl3.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.FRMAGREGAR.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.Form1.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.FormEMPLEADOS.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.gestionar_ACCESO.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.inventario.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.MENÚ.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.Properties.Resources.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.Registrar_nuevo.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.Resources.MetodoPago.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat_soft.validar.resources
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.csproj.GenerateResource.cache
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.csproj.CoreCompileInputs.cache
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.csproj.Fody.CopyLocal.cache
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.csproj.CopyComplete
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.exe
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\obj\Debug\Restaurat soft.pdb
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\icons\comida5.jpg
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\menu.resx
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\MetodoPago.resx
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\menu.cs
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\menu.Designer.cs
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\MetodoPago.cs
+C:\Users\FABIO\source\repos\Restaurat soft\Restaurat soft\bin\Debug\MetodoPago.Designer.cs
