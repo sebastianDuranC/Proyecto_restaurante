@@ -61,7 +61,6 @@ namespace Restaurat_soft.Resources
         private void MetodoPago_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'softRESTAURANTDataSet4.pedidos' Puede moverla o quitarla según sea necesario.
-            this.pedidosTableAdapter.Fill(this.softRESTAURANTDataSet4.pedidos);
 
 
            
