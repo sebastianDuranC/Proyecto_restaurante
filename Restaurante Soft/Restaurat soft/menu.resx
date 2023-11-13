@@ -121,6 +121,31 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="addItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAOw2AADsNgHVoobGAAAAB3RJ
+        TUUH5wYHDTExSlnYWAAABDFJREFUeF7tm7lv1EAUh40IEVBAAwU3Ev8AZ7LZpAGk3EUKagoESkVCAhRU
+        /BUgcUikAEGBuASIkgpxNVCDuEQBAgoQUHH8PufZQWisrI/NjrV+0qdd2X7HvJ15M/aOg0oqqSSz1Iam
+        xFFxZIlYKdaJjU0GH/jqrI1MB7XhKYtmAUXOaTyN3iGmxHXxSLwQb5oMPh6LW2Ja7BKdwqJrouBEGV+k
+        z63irPgo/rSYT+KC4McgNou2YMFw92xX3y9eC1cwreSdOFAbDGO0qAsSDAoM092/ClcAPvBNHBPFJQFD
+        9dEwAfzyPjc+ghgPdo0f1nAtIAkyBtvEK+Fy6CMMUWqCtSKjYEB0iDPC5chnZlQPOoS1JoPICOwUH8xo
+        mSBmYrfWpJTa6GSUAAqfy0EZOCmCniyLJRRVRKimN8xYGbkpss0IKAmWnKzwXMbLwEOxQlirUghKgnU3
+        S0+X8TJA7LTBWpVCUBLcfLD+dhkvA8ROG6xVKQQlU25WAn6Lz4K1PN9d1+TF6wRcE0xT28VlO1Y03ibg
+        i+A2NvJDIjjmujYP3iYgDsxoup/UgpIpVwkQLuN5aKsERNUeO/BWPBDh/GzwnWOci65DJ+/sgJ2WJyCq
+        9tiCTYIGc5cZ+eE7xzgXXVfE7NDyBMTVPq2gI0gcPcFluxFangCCz3RLio6gF5Q6AXBF8HQGW9DoEOAp
+        1Ixw2WwULxJAIWMoYAfargi6iAMzmu4ntaBkylUChMt4Hto+AfHsYFAk81T7JLxNADA7MM3xP2Peap+E
+        1wmIlshFVPskvE7AQlAlQFQJENaqFIKSKVcJEC7jZaBKgKgSIKxVKQQlU64SIFzG88Lih+0s0JYLoaui
+        T/QKnv01IwneJoCHHxtE5IcHIveF69o8eJmA92K3CHrwMRwnoS7Y6+fSyYp3CfgpJvpGw/3F5mnWV29/
+        6O+Q+CFculnwLgHnxTJhXuaEY3butHDpZsGrBMTjPkk4J4qsB94kIB73kCTddl4UVQ+8SEA47nutcfMJ
+        19QHJ/gsoh4UkoC8O8MTx32ScK3pnBIum41C7LkSsEo8Fy7jjTDvuE8SdETeevBM0AazmkJQEryJwZsZ
+        LuPz0dC4T5LaULxTNU89uC2yvU3yzwJlXKRdpobjXoQ2skqoPzzNZ9Z6cFwEtZGMMYTKs92QHZcuB0mc
+        E6nGfZJgQywVaevBE0HsZimD9Mx1w72CPy5djv7nnlgrzEp+wZZYI+4Kl8//YcgMiKA2OGlWMgpGtuw5
+        wWe/YN/wL+FyShe9JDaLUK8oqQ+F0yJQ0fkT5btwxUBsT8VA/9hkeK9RiMhgBL8C2+fvCCrsS8ErbNzO
+        7hPLhWkVL9gWDK0xcVHwgxADMxW9gzEfdnsoXFipdYUvS4aVlellvWBHeQfnFkrkjyK92HwTw2qhmOgp
+        Obt8JZW0kwTBX7UG3Omjrv/TAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="button8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -2609,16 +2634,19 @@
         SJ1B5vaFoSHfalkbGPgPtaG/mt2r8TgAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="dvgNOMBRE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="NOMBRE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dvgQTY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QTY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dvgPRECIO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PRECIO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dvgTOTAL.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="TOTAL.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ELIMINAR.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="pedidosBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

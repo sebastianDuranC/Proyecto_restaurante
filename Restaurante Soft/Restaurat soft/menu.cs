@@ -22,6 +22,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using static Restaurat_soft.AGREGAR;
 using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -42,15 +43,18 @@ namespace Restaurat_soft
             
         }
 
-
         private void MENÚ_Load(object sender, EventArgs e)
         {
+
+          
+            
             // TODO: esta línea de código carga datos en la tabla 'softRESTAURANTDataSet2.pedidos' Puede moverla o quitarla según sea necesario.
             this.pedidosTableAdapter.Fill(this.softRESTAURANTDataSet2.pedidos);
             this.WindowState = FormWindowState.Maximized;
 
-            //gunaDataGridView1.BorderStyle = BorderStyle.FixedSingle;
-            
+            DataGridViewButtonColumn btnBorrar = new DataGridViewButtonColumn();
+            btnBorrar.Name = "Eliminar";
+            grid.Columns.Add(btnBorrar);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -76,11 +80,6 @@ namespace Restaurat_soft
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void gunaDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -99,6 +98,8 @@ namespace Restaurat_soft
 
         private void button8_Click(object sender, EventArgs e)
         {
+
+
             ACCESO aCCESO = new ACCESO();
             aCCESO.Show();
             this.Close();
@@ -177,10 +178,7 @@ namespace Restaurat_soft
             }
         }
 
-        private void gunaDataGridView1_C(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -227,6 +225,9 @@ namespace Restaurat_soft
             };
            
         }
+       
+      
+        
 
         private void calcular()
         {
@@ -354,14 +355,14 @@ namespace Restaurat_soft
                          MetodoPago F1 = new MetodoPago();
                          F1.texttotal.Text = lblPRECIO.Text;
                          F1.lblNombreACCESO.Text = label4.Text;
-                           F1.grid2 = grid;
+                           
 
                       
                           F1.Show();
 
-                        lblPRECIO.Text = "";
-                        grid.Rows.Clear();
-
+                          lblPRECIO.Text = "";
+                         grid.Rows.Clear();
+    
                        
 
 
@@ -417,6 +418,16 @@ namespace Restaurat_soft
 
         }
 
+
+        private void addItem_Click(object sender, EventArgs e)
+        {
+            AGREGAR aGREGAR = new AGREGAR();
+            aGREGAR.SetMenuForm(this);
+            aGREGAR.Show();
+
+
+        }
+
         private void MENÚ_Shown(object sender, EventArgs e)
         {
             AddItems("Sopa de mani - Comida", 8.50, 8.50, categories.comida, "comida1.jpg");
@@ -426,10 +437,53 @@ namespace Restaurat_soft
             AddItems("Locro Gallina - Comida", 10, 10, categories.bebidas, "comida5.jpg");
 
 
+       
 
         }
 
+       
 
+      
+   
+
+        
+
+        
+        private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.grid.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                grid.Rows.Remove(grid.CurrentRow);
+            }
+
+        }
+
+        private void grid_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && this.grid.Columns[e.ColumnIndex].Name == "Eliminar" && e.RowIndex >= 0)
+            {
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                DataGridViewButtonCell celbtn = this.grid.Rows[e.RowIndex].Cells["Eliminar"] as DataGridViewButtonCell;
+                Icon icon = new Icon(Environment.CurrentDirectory + @"\\\delete.ico");
+                e.Graphics.DrawIcon(icon, e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+
+                this.grid.Rows[e.RowIndex].Height = icon.Height + 1;
+                this.grid.Columns[e.ColumnIndex].Width = icon.Width + 1;
+
+                e.Handled = true;
+
+            }
+        }
+
+        public void AgregarComida(Comida nuevaComida)
+        {
+            // Agrega la nueva comida a tu menú utilizando la función AddItems.
+            AddItems(nuevaComida.Nombre, nuevaComida.Costo, nuevaComida.Costo, categories.comida ,"Pollo_horno.jpg");
+
+
+        }
 
     }
 }

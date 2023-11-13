@@ -1,10 +1,13 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Restaurat_soft
 {
@@ -30,6 +33,46 @@ namespace Restaurat_soft
             return val;
 
         }
+        public static int SQL(string qry,Hashtable ht)
+        {
+            int res = 0;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(qry,cnn);
+                cmd.CommandType= CommandType.Text;
+
+
+                foreach (DictionaryEntry item in ht)
+                {
+
+                    cmd.Parameters.AddWithValue(item.Key.ToString(),item.Value);
+
+                }
+                if (cnn.State== ConnectionState.Closed)
+                {
+                    cnn.Open();
+
+                }
+                res= cmd.ExecuteNonQuery(); 
+
+                if (cnn.State== ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());    
+                cnn.Close();
+                
+            }
+
+            return res;
+
+        }
+   
+
+
 
 
     }

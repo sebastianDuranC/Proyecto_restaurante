@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.ServiceModel.Dispatcher;
 using System.Text;
@@ -12,16 +14,25 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace Restaurat_soft.Resources
 {
     public partial class MetodoPago : Form
 
     {
 
+
+        SqlConnection cnn = new SqlConnection("server=LAPTOP-NHM1I0G4\\SQLEXPRESS;database=SoftRESTAURANT;integrated security=true");
+        SqlCommand cmd = new SqlCommand();
+
+
         private Timer ti, ti2;
         public MetodoPago()
         {
             InitializeComponent();
+            MENÚ obj = new MENÚ();
+            //grid2 = obj.grid;
+
 
             ti = new Timer();
             ti.Tick += new EventHandler(timer1_Tick);
@@ -30,7 +41,7 @@ namespace Restaurat_soft.Resources
             ti2.Tick += new EventHandler(timer1_Tick);
             ti2.Enabled = true;
 
-            
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -47,11 +58,11 @@ namespace Restaurat_soft.Resources
             }
             catch (Exception)
             {
-                MessageBox.Show("NO SE INGRESO NINGUN DATOS PARA CALCULAR", "ERRROR", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                
+                MessageBox.Show("NO SE INGRESO NINGUN DATOS PARA CALCULAR", "ERRROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            
-            
+
+
 
 
 
@@ -61,10 +72,9 @@ namespace Restaurat_soft.Resources
         private void MetodoPago_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'softRESTAURANTDataSet4.pedidos' Puede moverla o quitarla según sea necesario.
-            this.pedidosTableAdapter.Fill(this.softRESTAURANTDataSet4.pedidos);
 
 
-           
+
 
         }
 
@@ -76,7 +86,7 @@ namespace Restaurat_soft.Resources
         private void button2_Click(object sender, EventArgs e)
         {
             calcularCAMBIO();
-         
+
 
 
         }
@@ -92,21 +102,27 @@ namespace Restaurat_soft.Resources
         }
 
         private void btnCOMIDA_Click(object sender, EventArgs e)
-        {  
-           
-            cbxMETODO.Text = "";
-            txtCAMBIO.Text = "";
-            txtRECIBO.Text = "";
+        {
 
-            textBox1.Text = "";
-            textBox2.Text = "";
-          
+
+
+            //cnn.Open();
+            //string nuevoNombre = textBox2.Text; // Reemplaza con el nombre del nuevo cliente.
+            //string consultaInsert = "INSERT INTO cliente (Nit, Nombre,Fecha_Registro) VALUES (@Nit, @Nombre , @fecha_Registro)";
+            //SqlCommand cmdInsert = new SqlCommand(consultaInsert, cnn);
+            //cmdInsert.Parameters.AddWithValue("@Nit", textBox1.Text);
+            //cmdInsert.Parameters.AddWithValue("@Nombre", nuevoNombre);
+            //cmdInsert.Parameters.AddWithValue("@fecha_Registro", DateTime.Now);
+
+            //    cmdInsert.ExecuteNonQuery();
+            //    cnn.Close();
+            //    MessageBox.Show("CLIENTE REGISTRADO ", " ", MessageBoxButtons.OK, MessageBoxIcon.Question);
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtCAMBIO_TextChanged(object sender, EventArgs e)
@@ -118,27 +134,27 @@ namespace Restaurat_soft.Resources
 
         private void txtRECIBO_TextChanged(object sender, EventArgs e)
         {
-            if (txtRECIBO.Text!="")
+            if (txtRECIBO.Text != "")
             {
-                double suma = Convert.ToDouble(txtRECIBO.Text)- Convert.ToDouble(texttotal.Text);
+                double suma = Convert.ToDouble(txtRECIBO.Text) - Convert.ToDouble(texttotal.Text);
                 txtCAMBIO.Text = suma.ToString();
-                   
-             
-               }
+
+
+            }
 
         }
 
         private void grid_DoubleClick(object sender, EventArgs e)
         {
-          
+
 
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text==""||textBox2.Text==""||txtRECIBO.Text=="")
+            if (textBox1.Text == "" || textBox2.Text == "" || txtRECIBO.Text == "")
             {
-                MessageBox.Show("Campo vacio","",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Campo vacio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -165,7 +181,7 @@ namespace Restaurat_soft.Resources
 
                 clsFactura.CreaTicket.EncabezadoVenta();
                 clsFactura.CreaTicket.LineasGuion();
-                foreach (DataGridViewRow r in grid2.Rows)
+                foreach (DataGridViewRow r in grid.Rows)
                 {
                     // PROD                     //PrECIO                                    CANT                         TOTAL
                     //Ticket1.AgregaArticulo(r.Cells[0].Value.ToString(), int.Parse(r.Cells[3].Value.ToString()), int.Parse(r.Cells[2].Value.ToString()), double.Parse(r.Cells[3].Value.ToString())); //imprime una linea de descripcion
@@ -184,6 +200,9 @@ namespace Restaurat_soft.Resources
                 Ticket1.TextoIzquierda(" ");
                 Ticket1.AgregaTotales("Efectivo Entregado:", double.Parse(txtRECIBO.Text));
                 Ticket1.AgregaTotales("Efectivo Devuelto:", double.Parse(txtCAMBIO.Text));
+                Ticket1.TextoIzquierda("Metodo de Pago:                 "+cbxMETODO.Text);
+                
+
 
 
                 // Ticket1.LineasTotales(); // imprime linea 
@@ -196,8 +215,33 @@ namespace Restaurat_soft.Resources
 
                 Ticket1.TextoCentro("**********************************");
                 Ticket1.TextoIzquierda(" ");
-                string impresora = "Microsoft XPS Document Writer";
-                Ticket1.ImprimirTiket(impresora);
+
+
+                //string impresora = "Microsoft XPS Document Writer";
+                //Ticket1.ImprimirTiket(impresora);
+
+                //////esto crea la factura dentro del proyecto
+                ////string identificadorUnico = Guid.NewGuid().ToString(); // Genera un identificador único
+                ////string nombreArchivo = $"Factura_{identificadorUnico}.txt";
+
+                ////// Guarda el contenido del recibo en el archivo de texto con el nombre único
+                ////File.WriteAllText(nombreArchivo, clsFactura.CreaTicket.line.ToString());
+
+                ////// Abre el archivo con Notepad
+                ////Process.Start( nombreArchivo,"notepad.exe");
+
+                ///crea una carpeta en escritorio para que factura se agreguen esa caperta y ponle la ruta de la carpeta
+                string identificadorUnico = Guid.NewGuid().ToString(); // Genera un identificador único
+                string carpetaDestino = @"C:\Users\FABIO\Desktop\facturas"; // Reemplaza esta ruta con la ruta deseada
+                string nombreArchivo = $"Factura_{identificadorUnico}.txt";
+                string rutaCompleta = Path.Combine(carpetaDestino, nombreArchivo);
+
+                // Guarda el contenido del recibo en el archivo de texto con el nombre único y en la carpeta destino
+                File.WriteAllText(rutaCompleta, clsFactura.CreaTicket.line.ToString());
+
+                // Abre el archivo con Notepad
+                Process.Start("notepad.exe", rutaCompleta);
+
 
                 MessageBox.Show("Gracias por preferirnos");
 
@@ -234,6 +278,100 @@ namespace Restaurat_soft.Resources
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text!="")
+            {
+                try
+                {
+
+
+
+                    cnn.Open();
+
+                    string CONSULTA = "select Nombre from cliente where Nit= @Nit";
+                    cmd = new SqlCommand(CONSULTA, cnn);
+                  
+                    cmd.Parameters.AddWithValue("@Nit", textBox1.Text); // Usar parámetros para evitar SQL Injection
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string nombreCliente = reader["Nombre"].ToString();
+                        textBox2.Text = nombreCliente;
+                    }
+                    else
+                    {
+
+                        MessageBox.Show(" CLIENTE NO REGISTRADO "," ERROR ",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        textBox2.Text = "";
+
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception E)
+                {
+
+                    MessageBox.Show(E.Message);
+                }
+                finally
+                {
+                    cnn.Close();
+
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("INTRODUZCA EL NIT","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Question);
+            }
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text==""&&textBox2.Text=="")
+            {
+                MessageBox.Show("CAMPO VACIO","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                cnn.Open();
+
+                // Obtener el "Nit" del cliente a registrar
+                string nitCliente = textBox1.Text;
+
+                // Verificar si el cliente ya está registrado
+                string consultaVerificar = "SELECT COUNT(*) FROM cliente WHERE Nit = @Nit";
+                SqlCommand cmdVerificar = new SqlCommand(consultaVerificar, cnn);
+                cmdVerificar.Parameters.AddWithValue("@Nit", nitCliente);
+                int count = (int)cmdVerificar.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    // El cliente ya está registrado, mostrar un mensaje de error o tomar la acción adecuada
+                    MessageBox.Show("El cliente ya está registrado", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    string nuevoNombre = textBox2.Text; // Reemplaza con el nombre del nuevo cliente.
+                    string consultaInsert = "INSERT INTO cliente (Nit, Nombre,Fecha_Registro) VALUES (@Nit, @Nombre , @fecha_Registro)";
+                    SqlCommand cmdInsert = new SqlCommand(consultaInsert, cnn);
+                    cmdInsert.Parameters.AddWithValue("@Nit", textBox1.Text);
+                    cmdInsert.Parameters.AddWithValue("@Nombre", nuevoNombre);
+                    cmdInsert.Parameters.AddWithValue("@fecha_Registro", DateTime.Now);
+
+                    cmdInsert.ExecuteNonQuery();
+
+                    MessageBox.Show("CLIENTE REGISTRADO ", " ", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+                cnn.Close();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

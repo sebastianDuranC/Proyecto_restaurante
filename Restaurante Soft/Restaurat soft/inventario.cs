@@ -41,7 +41,9 @@ namespace Restaurat_soft
             // TODO: esta línea de código carga datos en la tabla 'softRESTAURANTDataSet1.producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.softRESTAURANTDataSet1.producto);
             actualizar();
-
+            DataGridViewButtonColumn btnBorrar = new DataGridViewButtonColumn();
+            btnBorrar.Name = "Eliminar";
+            dataGridView1.Columns.Add(btnBorrar);
 
         }
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -110,7 +112,7 @@ namespace Restaurat_soft
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = dataGridView1.SelectedCells[0].Value.ToString();
+            //id = dataGridView1.SelectedCells[0].Value.ToString();
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -129,6 +131,33 @@ namespace Restaurat_soft
         private void button1_Click(object sender, EventArgs e)
         {
             //calcular();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
+            }
+        }
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && this.dataGridView1.Columns[e.ColumnIndex].Name == "Eliminar" && e.RowIndex >= 0)
+            {
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                DataGridViewButtonCell celbtn = this.dataGridView1.Rows[e.RowIndex].Cells["Eliminar"] as DataGridViewButtonCell;
+                Icon icon = new Icon(Environment.CurrentDirectory + @"\\\delete.ico");
+                e.Graphics.DrawIcon(icon, e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+
+                this.dataGridView1.Rows[e.RowIndex].Height = icon.Height + 1;
+                this.dataGridView1.Columns[e.ColumnIndex].Width = icon.Width + 1;
+
+                e.Handled = true;
+
+            }
         }
     }
 }

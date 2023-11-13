@@ -68,6 +68,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 36);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "admin";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button2
@@ -89,6 +90,7 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(164, 34);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "admin";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1

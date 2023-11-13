@@ -229,12 +229,12 @@ namespace Restaurat_soft
                 }
             }
 
-            public void ImprimirTiket(string stringimpresora)
-            {
-                RawPrinterHelper.SendStringToPrinter(stringimpresora, line.ToString());
-                line = new StringBuilder();
+            //public void ImprimirTiket(string stringimpresora)
+            //{
+            //    RawPrinterHelper.SendStringToPrinter(stringimpresora, line.ToString());
+            //    line = new StringBuilder();
 
-            }
+            //}
         }
 
         #region Clase para enviar a imprsora texto plano

@@ -58,18 +58,22 @@
             this.softRESTAURANTDataSet4 = new Restaurat_soft.SoftRESTAURANTDataSet4();
             this.pedidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pedidosTableAdapter = new Restaurat_soft.SoftRESTAURANTDataSet4TableAdapters.pedidosTableAdapter();
-            this.grid2 = new Guna.UI.WinForms.GunaDataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.grid = new Guna.UI.WinForms.GunaDataGridView();
             this.dvgNOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgPRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softRESTAURANTDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCAMBIO
@@ -149,11 +153,12 @@
             // cbxMETODO
             // 
             this.cbxMETODO.BackColor = System.Drawing.Color.Transparent;
+            this.cbxMETODO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxMETODO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbxMETODO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMETODO.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbxMETODO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbxMETODO.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxMETODO.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.cbxMETODO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbxMETODO.ItemHeight = 30;
             this.cbxMETODO.Items.AddRange(new object[] {
@@ -162,7 +167,8 @@
             "QR"});
             this.cbxMETODO.Location = new System.Drawing.Point(29, 582);
             this.cbxMETODO.Name = "cbxMETODO";
-            this.cbxMETODO.Size = new System.Drawing.Size(140, 36);
+            this.cbxMETODO.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbxMETODO.Size = new System.Drawing.Size(161, 36);
             this.cbxMETODO.TabIndex = 12;
             this.cbxMETODO.SelectedIndexChanged += new System.EventHandler(this.cbxMETODO_SelectedIndexChanged);
             // 
@@ -179,7 +185,7 @@
             // btnCOMIDA
             // 
             this.btnCOMIDA.Image = ((System.Drawing.Image)(resources.GetObject("btnCOMIDA.Image")));
-            this.btnCOMIDA.Location = new System.Drawing.Point(473, 470);
+            this.btnCOMIDA.Location = new System.Drawing.Point(471, 490);
             this.btnCOMIDA.Name = "btnCOMIDA";
             this.btnCOMIDA.Size = new System.Drawing.Size(188, 65);
             this.btnCOMIDA.TabIndex = 15;
@@ -246,7 +252,7 @@
             // 
             this.lblNombreACCESO.AutoSize = true;
             this.lblNombreACCESO.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreACCESO.Location = new System.Drawing.Point(633, 43);
+            this.lblNombreACCESO.Location = new System.Drawing.Point(304, 141);
             this.lblNombreACCESO.Name = "lblNombreACCESO";
             this.lblNombreACCESO.Size = new System.Drawing.Size(98, 23);
             this.lblNombreACCESO.TabIndex = 20;
@@ -255,7 +261,7 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(129, 166);
+            this.textBox1.Location = new System.Drawing.Point(127, 180);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 22);
             this.textBox1.TabIndex = 21;
@@ -264,7 +270,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(463, 164);
+            this.textBox2.Location = new System.Drawing.Point(471, 177);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(198, 27);
             this.textBox2.TabIndex = 22;
@@ -274,7 +280,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 163);
+            this.label4.Location = new System.Drawing.Point(48, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 25);
             this.label4.TabIndex = 23;
@@ -284,7 +290,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(307, 166);
+            this.label5.Location = new System.Drawing.Point(345, 179);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 25);
             this.label5.TabIndex = 24;
@@ -314,20 +320,65 @@
             // 
             this.pedidosTableAdapter.ClearBeforeFill = true;
             // 
-            // grid2
+            // button2
             // 
-            this.grid2.AllowUserToAddRows = false;
-            this.grid2.AllowUserToDeleteRows = false;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(473, 561);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 64);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "    IMPRIMIR  COMPROBANTE";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(29, 92);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(290, 177);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(683, 169);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(59, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 30;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // grid
+            // 
+            this.grid.AllowUserToAddRows = false;
+            this.grid.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.grid2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grid2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grid2.BackgroundColor = System.Drawing.Color.White;
-            this.grid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grid2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.grid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid.BackgroundColor = System.Drawing.Color.White;
+            this.grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -335,9 +386,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grid2.ColumnHeadersHeight = 27;
-            this.grid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grid.ColumnHeadersHeight = 27;
+            this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dvgNOMBRE,
             this.dvgQTY,
             this.dvgPRECIO,
@@ -349,56 +400,54 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.grid2.Enabled = false;
-            this.grid2.EnableHeadersVisualStyles = false;
-            this.grid2.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.grid2.Location = new System.Drawing.Point(41, 198);
-            this.grid2.Name = "grid2";
-            this.grid2.ReadOnly = true;
-            this.grid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.grid.Enabled = false;
+            this.grid.EnableHeadersVisualStyles = false;
+            this.grid.Location = new System.Drawing.Point(71, 212);
+            this.grid.Name = "grid";
+            this.grid.ReadOnly = true;
+            this.grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.grid2.RowHeadersVisible = false;
-            this.grid2.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.grid.RowHeadersVisible = false;
+            this.grid.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.grid2.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.grid2.RowTemplate.Height = 24;
-            this.grid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid2.Size = new System.Drawing.Size(660, 255);
-            this.grid2.TabIndex = 25;
-            this.grid2.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.grid2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.grid2.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.grid2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.grid2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.grid2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.grid2.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.grid2.ThemeStyle.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.grid2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.grid2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.grid2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.grid2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.grid2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.grid2.ThemeStyle.HeaderStyle.Height = 27;
-            this.grid2.ThemeStyle.ReadOnly = true;
-            this.grid2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.grid2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grid2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.grid2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.grid2.ThemeStyle.RowsStyle.Height = 24;
-            this.grid2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.grid2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.grid.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.grid.RowTemplate.Height = 24;
+            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grid.Size = new System.Drawing.Size(606, 792);
+            this.grid.TabIndex = 31;
+            this.grid.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.grid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.grid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.grid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.grid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.grid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.grid.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.grid.ThemeStyle.GridColor = System.Drawing.SystemColors.ControlDark;
+            this.grid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.grid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.grid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.grid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.grid.ThemeStyle.HeaderStyle.Height = 27;
+            this.grid.ThemeStyle.ReadOnly = true;
+            this.grid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.grid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.grid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.grid.ThemeStyle.RowsStyle.Height = 24;
+            this.grid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.grid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // dvgNOMBRE
             // 
@@ -434,38 +483,17 @@
             this.dvgTOTAL.Name = "dvgTOTAL";
             this.dvgTOTAL.ReadOnly = true;
             // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(473, 561);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 64);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "    IMPRIMIR  COMPROBANTE";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(29, 92);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // MetodoPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(773, 637);
+            this.Controls.Add(this.grid);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.grid2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
@@ -494,8 +522,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softRESTAURANTDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,14 +552,16 @@
         private System.Windows.Forms.BindingSource pedidosBindingSource;
         private SoftRESTAURANTDataSet4TableAdapters.pedidosTableAdapter pedidosTableAdapter;
         public System.Windows.Forms.Label lblNombreACCESO;
-        public Guna.UI.WinForms.GunaDataGridView grid2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgNOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgQTY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgPRECIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgTOTAL;
         public Guna.UI2.WinForms.Guna2TextBox txtCAMBIO;
         public Guna.UI2.WinForms.Guna2TextBox txtRECIBO;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        public Guna.UI.WinForms.GunaDataGridView grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgNOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgQTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgPRECIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgTOTAL;
     }
 }
