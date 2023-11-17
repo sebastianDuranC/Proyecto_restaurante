@@ -36,6 +36,50 @@ namespace Restaurat_soft
             public string RutaImagen { get; set; }
         }
 
+        //private void agregar_comida_Click(object sender, EventArgs e)
+        //{
+        //    OpenFileDialog ofd = new OpenFileDialog();
+        //    ofd.Filter = "Imágenes (.jpg, .png)|*.jpg;*.png";
+
+        //    if (ofd.ShowDialog() == DialogResult.OK)
+        //    {
+        //        ////Obtén la ruta de la imagen seleccionada
+        //        string sourceImagePath = ofd.FileName;
+
+        //        //Especifica la ruta de destino(C: \Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\icons)
+        //        string destinationPath = @"C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\icons\";
+
+        //        //Verifica si el directorio de destino existe
+        //        if (!Directory.Exists(destinationPath))
+        //        {
+        //            Directory.CreateDirectory(destinationPath); // Crea el directorio si no existe
+        //        }
+
+        //        try
+        //        {
+        //            //Copia la imagen a la ubicación de destino
+        //            File.Copy(sourceImagePath, Path.Combine(destinationPath, Path.GetFileName(sourceImagePath)));
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            //Maneja cualquier excepción que ocurra
+        //            MessageBox.Show($"Error al copiar la imagen: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+
+        //        //Actualiza la variable filePath con la nueva ruta
+        //        filePath = Path.Combine(destinationPath, Path.GetFileName(sourceImagePath));
+
+        //        //Muestra la imagen en tu control
+        //        txtImage.Image = new Bitmap(filePath);
+
+        //        //filePath =ofd.FileName;
+        //        //txtImage.Image = new Bitmap(filePath);   
+
+
+        //    }
+
+        //}
+
         private void agregar_comida_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -43,13 +87,13 @@ namespace Restaurat_soft
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                ////Obtén la ruta de la imagen seleccionada
+                // Obtén la ruta de la imagen seleccionada
                 string sourceImagePath = ofd.FileName;
 
-                //Especifica la ruta de destino(C: \Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\icons)
+                // Especifica la ruta de destino
                 string destinationPath = @"C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\icons\";
 
-                //Verifica si el directorio de destino existe
+                // Verifica si el directorio de destino existe
                 if (!Directory.Exists(destinationPath))
                 {
                     Directory.CreateDirectory(destinationPath); // Crea el directorio si no existe
@@ -57,28 +101,34 @@ namespace Restaurat_soft
 
                 try
                 {
-                    //Copia la imagen a la ubicación de destino
-                    File.Copy(sourceImagePath, Path.Combine(destinationPath, Path.GetFileName(sourceImagePath)));
+                    // Genera un nombre único para el archivo de destino usando el timestamp actual
+                    string uniqueFileName = $"{DateTime.Now:yyyyMMddHHmmssfff}_{Path.GetFileName(sourceImagePath)}";
+
+                    // Combina la ruta de destino con el nombre único del archivo
+                    string destinationFilePath = Path.Combine(destinationPath, uniqueFileName);
+
+                    // Copia la imagen a la ubicación de destino
+                    File.Copy(sourceImagePath, destinationFilePath);
+
+                    // Actualiza la variable filePath con la nueva ruta
+                    filePath = destinationFilePath;
+
+                    // Muestra la imagen en tu control
+                    txtImage.Image = new Bitmap(filePath);
                 }
                 catch (Exception ex)
                 {
-                    //Maneja cualquier excepción que ocurra
+                    // Maneja cualquier excepción que ocurra
                     MessageBox.Show($"Error al copiar la imagen: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                //Actualiza la variable filePath con la nueva ruta
-                filePath = Path.Combine(destinationPath, Path.GetFileName(sourceImagePath));
-
-                //Muestra la imagen en tu control
-                txtImage.Image = new Bitmap(filePath);
-                
-                //filePath =ofd.FileName;
-                //txtImage.Image = new Bitmap(filePath);   
-
-
             }
-        
         }
+
+
+
+
+
+
         public int id = 0;
 
        Byte[] imagenByteArray;

@@ -780,7 +780,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAABs1JREFUaEPtmVlsVFUcxnkxvijxSR/BxI1FXHBBUKM+aFso4i7SAgqUshRREBUR
+        vgAADr4B6kKxwAAABs1JREFUaEPtmVlsVFUcxnkxvijxSR/BxI1FXHBBUKM+aFso4i7SAgqUshRREBUR
         cXtSloIbKoqyiUQQHkxYBFlb2kL3TvdO905n6Tb7TPn8f2fmTqadS/Q2vQkPPckvkNye833fOf/zvzPt
         qJExMkbGVcbk7dddUxgZY9IOnR6TdjB4jXEmau8/hqTlhJUH+rH8t6Bixe9hxVOfW/H4J/V4bEMtHv2o
         BtPWV2Hqh5V4ZF0Fpqwtx8Pvl+Kh90rw4LtFeGBNISa/cwn3ryrAfW/n4d63LuKelTmY9OYF3L3iHCYu
@@ -822,6 +822,18 @@
     <value>True</value>
   </metadata>
   <metadata name="dvgTOTAL.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NOMBRE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="QTY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PRECIO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="TOTAL.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

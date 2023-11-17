@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MENÚ));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +58,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnREMOVER = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.grid1 = new System.Windows.Forms.DataGridView();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pedidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.softRESTAURANTDataSet2 = new Restaurat_soft.SoftRESTAURANTDataSet2();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,24 +75,18 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grid = new System.Windows.Forms.DataGridView();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ELIMINAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuDIA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softRESTAURANTDataSet2)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -381,12 +382,93 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.flowLayoutPanel1.Controls.Add(this.grid);
+            this.flowLayoutPanel1.Controls.Add(this.grid1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1315, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(609, 795);
             this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // grid1
+            // 
+            this.grid1.AllowUserToAddRows = false;
+            this.grid1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid1.BackgroundColor = System.Drawing.Color.White;
+            this.grid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.grid1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.grid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NOMBRE,
+            this.QTY,
+            this.PRECIO,
+            this.TOTAL});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.grid1.EnableHeadersVisualStyles = false;
+            this.grid1.Location = new System.Drawing.Point(3, 3);
+            this.grid1.Name = "grid1";
+            this.grid1.ReadOnly = true;
+            this.grid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grid1.RowHeadersVisible = false;
+            this.grid1.RowHeadersWidth = 51;
+            this.grid1.RowTemplate.Height = 24;
+            this.grid1.Size = new System.Drawing.Size(606, 792);
+            this.grid1.TabIndex = 0;
+            this.grid1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellClick);
+            this.grid1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.grid_CellPainting);
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.FillWeight = 101.0101F;
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.MinimumWidth = 6;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            // 
+            // QTY
+            // 
+            this.QTY.FillWeight = 49.81732F;
+            this.QTY.HeaderText = "QTY";
+            this.QTY.MinimumWidth = 6;
+            this.QTY.Name = "QTY";
+            this.QTY.ReadOnly = true;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.FillWeight = 112.438F;
+            this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.MinimumWidth = 6;
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            // 
+            // TOTAL
+            // 
+            this.TOTAL.FillWeight = 136.7346F;
+            this.TOTAL.HeaderText = "TOTAL";
+            this.TOTAL.MinimumWidth = 6;
+            this.TOTAL.Name = "TOTAL";
+            this.TOTAL.ReadOnly = true;
             // 
             // pedidosBindingSource
             // 
@@ -460,64 +542,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // grid
-            // 
-            this.grid.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grid.BackgroundColor = System.Drawing.Color.White;
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NOMBRE,
-            this.QTY,
-            this.PRECIO,
-            this.TOTAL,
-            this.ELIMINAR});
-            this.grid.Location = new System.Drawing.Point(3, 3);
-            this.grid.Name = "grid";
-            this.grid.RowHeadersWidth = 51;
-            this.grid.RowTemplate.Height = 24;
-            this.grid.Size = new System.Drawing.Size(606, 601);
-            this.grid.TabIndex = 0;
-            this.grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellClick);
-            this.grid.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.grid_CellPainting);
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "NOMBRE";
-            this.NOMBRE.MinimumWidth = 6;
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.Width = 125;
-            // 
-            // QTY
-            // 
-            this.QTY.HeaderText = "QTY";
-            this.QTY.MinimumWidth = 6;
-            this.QTY.Name = "QTY";
-            this.QTY.Width = 125;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "PRECIO";
-            this.PRECIO.MinimumWidth = 6;
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.Width = 125;
-            // 
-            // TOTAL
-            // 
-            this.TOTAL.HeaderText = "TOTAL";
-            this.TOTAL.MinimumWidth = 6;
-            this.TOTAL.Name = "TOTAL";
-            this.TOTAL.Width = 125;
-            // 
-            // ELIMINAR
-            // 
-            this.ELIMINAR.HeaderText = "ELIMINAR";
-            this.ELIMINAR.MinimumWidth = 6;
-            this.ELIMINAR.Name = "ELIMINAR";
-            this.ELIMINAR.Visible = false;
-            this.ELIMINAR.Width = 125;
-            // 
             // MENÚ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -548,12 +572,12 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softRESTAURANTDataSet2)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.empleadosDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,11 +621,10 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button addItem;
-        private System.Windows.Forms.DataGridView grid;
+        public System.Windows.Forms.DataGridView grid1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ELIMINAR;
     }
 }

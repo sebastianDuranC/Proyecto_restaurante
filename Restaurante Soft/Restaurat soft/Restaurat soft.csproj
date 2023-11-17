@@ -307,6 +307,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EMPLEADOSDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormCOMPRA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCOMPRA.Designer.cs">
+      <DependentUpon>FormCOMPRA.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMAGREGAR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="COMPONENTES\UserControl3.resx">
       <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCOMPRA.resx">
+      <DependentUpon>FormCOMPRA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMAGREGAR.resx">
       <DependentUpon>FRMAGREGAR.cs</DependentUpon>

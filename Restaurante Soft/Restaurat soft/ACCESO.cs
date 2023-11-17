@@ -94,5 +94,12 @@ namespace Restaurat_soft
 
            
         }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            FormCOMPRA COMPRA = new FormCOMPRA();
+            COMPRA.ShowDialog();
+            this.Close();
+        }
     }
 }

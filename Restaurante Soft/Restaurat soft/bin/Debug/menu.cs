@@ -40,9 +40,10 @@ namespace Restaurat_soft
             ti2 = new Timer();
             ti2.Tick += new EventHandler(timer);
             ti2.Enabled = true;
-            
-        }
 
+        }
+        
+        
         private void MENÚ_Load(object sender, EventArgs e)
         {
 
@@ -54,8 +55,8 @@ namespace Restaurat_soft
 
             DataGridViewButtonColumn btnBorrar = new DataGridViewButtonColumn();
             btnBorrar.Name = "Eliminar";
-            grid.Columns.Add(btnBorrar);
-        }
+            grid1.Columns.Add(btnBorrar);
+            DTPRODUCTO();        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -167,7 +168,7 @@ namespace Restaurat_soft
         private void gunaDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             int count = 0;
-            foreach (DataGridViewRow row in grid.Rows)
+            foreach (DataGridViewRow row in grid1.Rows)
             {
 
                 count++;
@@ -205,7 +206,7 @@ namespace Restaurat_soft
             w.onselect += (ss, ee) =>
             { 
                 var wdg = (sopaMANI)ss;
-                foreach (DataGridViewRow item in grid.Rows)
+                foreach (DataGridViewRow item in grid1.Rows)
                 {
                     if (item.Cells[0].Value.ToString() == wdg.id)
                     {
@@ -220,7 +221,7 @@ namespace Restaurat_soft
                     }
                 }
 
-                grid.Rows.Add(new object[] {wdg.lblSOPA.Text,1, wdg.lblPRECIOC.Text,wdg.label1.Text });
+                grid1.Rows.Add(new object[] {wdg.lblSOPA.Text,1, wdg.lblPRECIOC.Text,wdg.label1.Text });
                 calcular();
             };
            
@@ -233,7 +234,7 @@ namespace Restaurat_soft
         {
             double total = 0;
             lblPRECIO.Text = "";
-            foreach (DataGridViewRow item in grid.Rows)
+            foreach (DataGridViewRow item in grid1.Rows)
             {
                 total += double.Parse(item.Cells[3].Value.ToString());
 
@@ -303,7 +304,7 @@ namespace Restaurat_soft
 
         private void btnREMOVER_Click(object sender, EventArgs e)
         {
-            if (grid.Rows.Count>0)
+            if (grid1.Rows.Count>0)
             {
                 try
                 {
@@ -314,7 +315,7 @@ namespace Restaurat_soft
 
 
 
-                        grid.Rows.Clear();
+                        grid1.Rows.Clear();
                         lblPRECIO.Text = "0.00";
                     }
                 }
@@ -336,13 +337,13 @@ namespace Restaurat_soft
         }
 
 
-      
 
+       
+        
         private void button1_Click(object sender, EventArgs e)
         {
            
-
-                if (grid.Rows.Count > 0)
+            if (grid1.Rows.Count > 0)
                 {
                     try
                     {
@@ -355,13 +356,15 @@ namespace Restaurat_soft
                          MetodoPago F1 = new MetodoPago();
                          F1.texttotal.Text = lblPRECIO.Text;
                          F1.lblNombreACCESO.Text = label4.Text;
-                           
 
+                        AddOwnedForm(F1);
+                      
                       
                           F1.Show();
 
-                          lblPRECIO.Text = "";
-                         grid.Rows.Clear();
+
+                        lblPRECIO.Text = "";
+                         //grid1.Rows.Clear();
     
                        
 
@@ -382,7 +385,7 @@ namespace Restaurat_soft
                 } else
                 {
                     MessageBox.Show("NO TIENE PRODUCTOS AGREGADO...", "VERIFIQUE", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    grid.Rows.Clear();
+                    grid1.Rows.Clear();
                 }
 
               
@@ -451,32 +454,64 @@ namespace Restaurat_soft
         
         private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (this.grid.Columns[e.ColumnIndex].Name == "Eliminar")
+            if (this.grid1.Columns[e.ColumnIndex].Name == "Eliminar")
             {
-                grid.Rows.Remove(grid.CurrentRow);
+                grid1.Rows.Remove(grid1.CurrentRow);
+                calcular();
             }
 
         }
 
         private void grid_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.ColumnIndex >= 0 && this.grid.Columns[e.ColumnIndex].Name == "Eliminar" && e.RowIndex >= 0)
-            {
+            //if (e.ColumnIndex >= 0 && this.grid1.Columns[e.ColumnIndex].Name == "Eliminar" && e.RowIndex >= 0)
+            //{
 
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+            //    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-                DataGridViewButtonCell celbtn = this.grid.Rows[e.RowIndex].Cells["Eliminar"] as DataGridViewButtonCell;
-                Icon icon = new Icon(Environment.CurrentDirectory + @"\\\delete.ico");
-                e.Graphics.DrawIcon(icon, e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+            //    DataGridViewButtonCell celbtn = this.grid1.Rows[e.RowIndex].Cells["Eliminar"] as DataGridViewButtonCell;
+            //    Icon icon = new Icon(Environment.CurrentDirectory + @"\\\delete.ico");
+            //    e.Graphics.DrawIcon(icon, e.CellBounds.Left + 1, e.CellBounds.Top + 1);
 
-                this.grid.Rows[e.RowIndex].Height = icon.Height + 1;
-                this.grid.Columns[e.ColumnIndex].Width = icon.Width + 1;
+            //    this.grid1.Rows[e.RowIndex].Height = icon.Height + 1;
+            //    this.grid1.Columns[e.ColumnIndex].Width = icon.Width + 1;
 
-                e.Handled = true;
+            //    e.Handled = true;
 
-            }
+            //}
+
+                if (e.ColumnIndex >= 0 && this.grid1.Columns[e.ColumnIndex].Name == "Eliminar" && e.RowIndex >= 0)
+                {
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                    DataGridViewButtonCell celbtn = this.grid1.Rows[e.RowIndex].Cells["Eliminar"] as DataGridViewButtonCell;
+
+                    // Cargar el ícono y redimensionarlo a un tamaño específico (por ejemplo, 16x16 píxeles)
+                    Icon originalIcon = new Icon(Environment.CurrentDirectory + @"\delete.ico");
+                    Bitmap resizedIcon = new Bitmap(originalIcon.ToBitmap(), new Size(40, 40));
+
+                    // Dibujar el ícono redimensionado en la celda
+                    e.Graphics.DrawImage(resizedIcon, e.CellBounds.Left + 3, e.CellBounds.Top + 3);
+
+                    this.grid1.Rows[e.RowIndex].Height = resizedIcon.Height + 8;
+                    this.grid1.Columns[e.ColumnIndex].Width = resizedIcon.Width + 8;
+
+                    e.Handled = true;
+                }
+            
+
         }
+        private DataGridView dt_producto;
 
+        public DataGridView Dt_producto { get => dt_producto; set => dt_producto = value; }
+
+        public void DTPRODUCTO()
+        {
+
+
+
+            Dt_producto = grid1;
+        }
         public void AgregarComida(Comida nuevaComida)
         {
             // Agrega la nueva comida a tu menú utilizando la función AddItems.

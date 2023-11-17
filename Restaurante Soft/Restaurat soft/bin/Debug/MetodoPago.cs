@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
@@ -25,14 +26,12 @@ namespace Restaurat_soft.Resources
         SqlConnection cnn = new SqlConnection("server=LAPTOP-NHM1I0G4\\SQLEXPRESS;database=SoftRESTAURANT;integrated security=true");
         SqlCommand cmd = new SqlCommand();
 
-
+     
         private Timer ti, ti2;
         public MetodoPago()
         {
             InitializeComponent();
-            MENÚ obj = new MENÚ();
-            //grid2 = obj.grid;
-
+            
 
             ti = new Timer();
             ti.Tick += new EventHandler(timer1_Tick);
@@ -67,14 +66,14 @@ namespace Restaurat_soft.Resources
 
 
         }
+      
 
 
         private void MetodoPago_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'softRESTAURANTDataSet4.pedidos' Puede moverla o quitarla según sea necesario.
 
-
-
+           
 
         }
 
@@ -181,7 +180,7 @@ namespace Restaurat_soft.Resources
 
                 clsFactura.CreaTicket.EncabezadoVenta();
                 clsFactura.CreaTicket.LineasGuion();
-                foreach (DataGridViewRow r in grid.Rows)
+                foreach (DataGridViewRow r in gridA.Rows)
                 {
                     // PROD                     //PrECIO                                    CANT                         TOTAL
                     //Ticket1.AgregaArticulo(r.Cells[0].Value.ToString(), int.Parse(r.Cells[3].Value.ToString()), int.Parse(r.Cells[2].Value.ToString()), double.Parse(r.Cells[3].Value.ToString())); //imprime una linea de descripcion

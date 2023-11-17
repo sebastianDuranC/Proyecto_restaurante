@@ -142,3 +142,4 @@ C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\obj\Debug
 C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\obj\Debug\Restaurat soft.exe
 C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\obj\Debug\Restaurat soft.pdb
 C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\bin\Debug\icons\pollo_horno.jpg
+C:\Users\FABIO\Desktop\restaurante gif\Restaurante Soft\Restaurat soft\obj\Debug\Restaurat_soft.FormCOMPRA.resources
