@@ -57,9 +57,6 @@
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.6.1.0\lib\net40\Bunifu.UI.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
     </Reference>
@@ -73,7 +70,7 @@
       <HintPath>..\packages\GumroadLicensing.1.0.3\lib\net40\GumroadLicensing.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Downloads\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\OneDrive\Escritorio\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>

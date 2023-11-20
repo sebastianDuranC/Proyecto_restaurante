@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Restaurante Soft",
+    "\\Restaurante Soft\\Restaurat soft"
   ],
-  "SelectedNode": "\\ModeloDeDatos.txt",
+  "SelectedNode": "\\Restaurante Soft\\Restaurat soft\\ACCESO.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -14,7 +14,7 @@ namespace Restaurat_soft
 {
     public partial class Form1 : Form
     {
-        SqlConnection cnn = new SqlConnection("server=LAPTOP-NHM1I0G4\\SQLEXPRESS;database=SoftRESTAURANT;integrated security=true");
+        SqlConnection cnn = new SqlConnection("server=SEBASTIAN_DURAN\\SQLSERVER_SEBAS;database=SoftRESTAURANT;integrated security=true");
        SqlCommand cmd=new SqlCommand();
         string NombreAcceso;
         public Form1()
@@ -117,6 +117,11 @@ namespace Restaurat_soft
         {
             validar validar = new validar();
             validar.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -174,6 +174,7 @@
             this.label10.Size = new System.Drawing.Size(93, 20);
             this.label10.TabIndex = 24;
             this.label10.Text = "COMPRAS";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox11
             // 

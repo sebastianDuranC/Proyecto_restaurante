@@ -101,5 +101,10 @@ namespace Restaurat_soft
             COMPRA.ShowDialog();
             this.Close();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

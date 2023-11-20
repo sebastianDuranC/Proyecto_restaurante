@@ -13,7 +13,7 @@ namespace Restaurat_soft
 {
     public partial class FormEMPLEADOS : Form
     {
-        SqlConnection cnn = new SqlConnection("server=LAPTOP-NHM1I0G4\\SQLEXPRESS;database=SoftRESTAURANT;integrated security=true");
+        SqlConnection cnn = new SqlConnection("server=SEBASTIAN_DURAN\\SQLSERVER_SEBAS;database=SoftRESTAURANT;integrated security=true");
         SqlCommand cmd = new SqlCommand();
 
        

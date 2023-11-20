@@ -19,20 +19,37 @@ namespace Restaurat_soft
 
         private void btnCOMIDA_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                dataGridView1["Cantidad", i].Value = txtcantidad.Text;
-                dataGridView1["Producto", i].Value = txtNOMBRE.Text;
-                dataGridView1["Precio", i].Value = txtprecio.Text;
-                dataGridView1["Tipo_de_Pago", i].Value = cbtipopago.Text;
-                dataGridView1["Precio_Final", i].Value = (Convert.ToInt32(txtprecio.Text) * Convert.ToInt32(txtcantidad.Text)).ToString();
+            mainclass.añadircompra(Convert.ToInt16(txtcantidad.Text), txtNOMBRE.Text, Convert.ToDouble(txtprecio.Text), cbtipopago.Text, Convert.ToDouble(txtprecio.Text) * Convert.ToInt16(txtcantidad.Text));
 
-            }
+
+
+
+
             txtcantidad.Clear();
             txtNOMBRE.Clear();
             txtprecio.Clear();
             cbtipopago.Text = "";
 
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FormCOMPRA_Load(object sender, EventArgs e)
+        {
+            actualizar_tabla();
+
+        }
+        void actualizar_tabla()
+        {
+            dataGridView1.DataSource = mainclass.TB_compras();
+        }
+
+        private void txtNOMBRE_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

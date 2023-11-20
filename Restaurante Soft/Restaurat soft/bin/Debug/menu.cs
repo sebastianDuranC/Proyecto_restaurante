@@ -56,7 +56,8 @@ namespace Restaurat_soft
             DataGridViewButtonColumn btnBorrar = new DataGridViewButtonColumn();
             btnBorrar.Name = "Eliminar";
             grid1.Columns.Add(btnBorrar);
-            DTPRODUCTO();        }
+            DTPRODUCTO();        
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -512,6 +513,12 @@ namespace Restaurat_soft
 
             Dt_producto = grid1;
         }
+
+        private void grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         public void AgregarComida(Comida nuevaComida)
         {
             // Agrega la nueva comida a tu menú utilizando la función AddItems.
